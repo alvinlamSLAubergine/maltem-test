@@ -1,7 +1,15 @@
 import './App.css';
+import { Header } from './components';
+import { ThemeProvider } from './theme';
 
 function App() {
-  return <div className='App'>TEST</div>;
+  return (
+    <ThemeProvider>
+      <div className='app'>
+        <Header />
+      </div>
+    </ThemeProvider>
+  );
 }
 
 export default App;

@@ -7,6 +7,22 @@
   --typography-color-purple: #5a2648;
   --typography-color-error: #c62828;
   --typography-subtitle-color: black;
+
+  /* Background */
+  --background-color-primary: #CDBCAD;
+  --background-color-opacity-20: rgba(205, 188, 173, 0.2);
+  --background-color-opacity-40: rgba(205, 188, 173, 0.4);
+
+  /* Button */
+  --button-background-color-primary: #5a2648;
+  --button-background-color-primary-hover: #8e557a;
+  --button-background-color-primary-active: #5a2648;
+  --button-background-color-secondary: #CDBCAD;
+  --button-background-color-secondary-hover: #CDBCAD;
+  --button-background-color-secondary-active: #CDBCAD;
+
+  /* Icon */
+  --icon-color-primary: white;
 }
 
 .theme--dark {
@@ -16,4 +32,12 @@
   --typography-color-purple: white;
   --typography-color-error: #ef5350;
   --typography-subtitle-color: rgba(255, 255, 255, 0.5);
+
+  /* Background */
+  --background-color-primary: #1a1a1a;
+  --background-color-opacity-20: rgba(26, 26, 26, 0.2);
+  --background-color-opacity-40: rgba(26, 26, 26, 0.4);
+
+  /* Button */
+  --button-background-color-primary: #8e557a;
 }

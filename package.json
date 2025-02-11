@@ -32,6 +32,11 @@
       "last 1 safari version"
     ]
   },
+  "jest": {
+    "transform": {
+      "\\.svg$": "<rootDir>/fileTransformer.js"
+    }
+  },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
