@@ -1,0 +1,19 @@
+/* Follow this color palette: https://www.color-hex.com/color-palette/50330 */
+
+.theme {
+  /* Typography */
+  --typography-color-primary: black;
+  --typography-color-secondary: #666666;
+  --typography-color-purple: #5a2648;
+  --typography-color-error: #c62828;
+  --typography-subtitle-color: black;
+}
+
+.theme--dark {
+  /* Typography */
+  --typography-color-primary: white;
+  --typography-color-secondary: white;
+  --typography-color-purple: white;
+  --typography-color-error: #ef5350;
+  --typography-subtitle-color: rgba(255, 255, 255, 0.5);
+}

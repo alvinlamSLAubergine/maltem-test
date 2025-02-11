@@ -1,0 +1,64 @@
+@import '../../theme/theme-context.css';
+
+.typography {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.typography--bold {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.typography--large {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.33;
+}
+
+.typography--subtitle {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.43;
+}
+
+.typography--color-primary {
+  color: var(--typography-color-primary);
+}
+
+.typography--color-secondary {
+  color: var(--typography-color-secondary);
+}
+
+.typography--color-purple {
+  color: var(--typography-color-purple);
+}
+
+.typography--color-error {
+  color: var(--typography-color-error);
+}
+
+.typography--subtitle-color {
+  color: var(--typography-subtitle-color);
+}
+
+
+/* For tablets and below */
+@media screen and (max-width: 768px) {
+  .typography .typography--bold {
+    font-size: 0.875rem;
+    line-height: 1.43;
+  }
+
+  .typography--large {
+    font-size: 1.25rem;
+    line-height: 1.33;
+  }
+
+  .typography--subtitle {
+    font-size: 0.75rem;
+    line-height: 1.33;
+  }
+}
