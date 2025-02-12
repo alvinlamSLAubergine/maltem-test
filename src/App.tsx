@@ -1,5 +1,5 @@
 import './App.css';
-import { Header } from './components';
+import { Header, Options } from './components';
 import { ThemeProvider } from './theme';
 
 function App() {
@@ -7,6 +7,7 @@ function App() {
     <ThemeProvider>
       <div className='app'>
         <Header />
+        <Options />
       </div>
     </ThemeProvider>
   );

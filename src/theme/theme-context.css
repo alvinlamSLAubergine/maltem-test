@@ -12,11 +12,13 @@
   --background-color-primary: #CDBCAD;
   --background-color-opacity-20: rgba(205, 188, 173, 0.2);
   --background-color-opacity-40: rgba(205, 188, 173, 0.4);
+  --background-color-opacity-70: rgba(205, 188, 173, 0.7);
+  --background-color-opacity-90: rgba(205, 188, 173, 0.9);
 
   /* Button */
-  --button-background-color-primary: #5a2648;
-  --button-background-color-primary-hover: #8e557a;
-  --button-background-color-primary-active: #5a2648;
+  --button-background-color-primary: #8e557a;
+  --button-background-color-primary-hover: #5a2648;
+  --button-background-color-primary-active: #7a3b5f;
   --button-background-color-secondary: #CDBCAD;
   --button-background-color-secondary-hover: #CDBCAD;
   --button-background-color-secondary-active: #CDBCAD;

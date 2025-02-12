@@ -1,0 +1,45 @@
+.options {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 16px;
+  width: 300px;
+}
+
+.options--button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 138px;
+  height: 120px;
+  background-color: var(--background-color-primary);
+  padding: 6px 20px 8px 20px;
+  border: 2px solid;
+  filter: drop-shadow(2px 3px 4px rgba(0, 0, 0, 0.3));
+}
+
+.options--button-title {
+  line-height: normal;
+}
+
+.options--button:hover {
+  background-color: var(--background-color-opacity-70);
+}
+
+.options--button:active {
+  background-color: var(--background-color-opacity-90);
+  filter: none;
+}
+
+.options--button-icon {
+  width: 48px;
+  height: 48px;
+}
+
+/* For tablets and below */
+@media screen and (max-width: 768px) {
+  .options {
+    width: 300px;
+  }
+}

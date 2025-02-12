@@ -4,9 +4,10 @@ import styles from './typography.module.css';
 interface Props extends PropsWithChildren {
   variant?: 'normal' | 'bold' | 'large' | 'subtitle';
   color?: 'primary' | 'secondary' | 'purple' | 'subtitle' | 'error';
+  className?: string;
 }
 
-export const Typography: React.FC<Props> = ({ variant = 'normal', color = 'primary', children }) => {
+export const Typography: React.FC<Props> = ({ variant = 'normal', color = 'primary', className, children }) => {
   const variantStyle = {
     ['normal']: styles['typography--normal'],
     ['bold']: styles['typography--bold'],
@@ -22,12 +23,12 @@ export const Typography: React.FC<Props> = ({ variant = 'normal', color = 'prima
     ['error']: styles['typography--color-error'],
   }[color];
 
-  const className = `${styles.typography} ${variantStyle} ${colorStyle}`;
+  const _className = `${styles.typography} ${variantStyle} ${colorStyle} ${className}`;
 
   return (
     <div
       data-testid={`typography-${variant}-${color}`}
-      className={className}
+      className={_className}
     >
       {children}
     </div>
