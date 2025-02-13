@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/maltem-test/static/css/main.1f862413.css",
+    "main.js": "/maltem-test/static/js/main.f3d041c1.js",
+    "index.html": "/maltem-test/index.html",
+    "static/media/quit-icon.svg": "/maltem-test/static/media/quit-icon.8ba4572578ecbf607cd119bd5bd12d14.svg",
+    "static/media/cash-icon.svg": "/maltem-test/static/media/cash-icon.6906e7880d6e98be67106c1b59f35c0b.svg",
+    "static/media/credit-icon.svg": "/maltem-test/static/media/credit-icon.5c2d2f06929fddf4efc16943def6a967.svg",
+    "static/media/document-icon.svg": "/maltem-test/static/media/document-icon.f28a4befd9b9ad7aeec5863b33208b9e.svg",
+    "main.1f862413.css.map": "/maltem-test/static/css/main.1f862413.css.map",
+    "main.f3d041c1.js.map": "/maltem-test/static/js/main.f3d041c1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1f862413.css",
+    "static/js/main.f3d041c1.js"
+  ]
+}
