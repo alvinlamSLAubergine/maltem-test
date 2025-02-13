@@ -26,10 +26,13 @@ const BankingContext = createContext<BankingContext>({
 
 export const useBanking = () => useContext(BankingContext);
 export const BankingProvider: React.FC<PropsWithChildren> = ({ children }) => {
+  const transactions = JSON.parse(localStorage.getItem('transactions') || '[]') as Transaction[];
+  const currentBalance = Number(localStorage.getItem('currentBalance') || '0');
+
   const [state, dispatch] = useReducer(bankingReducer, {
     currentScreen: 'landing',
-    transactions: [],
-    currentBalance: 0,
+    transactions: transactions,
+    currentBalance: currentBalance,
   });
 
   return (
@@ -68,6 +71,8 @@ function bankingReducer(
 
   switch (action.type) {
     case 'withdraw':
+      localStorage.setItem('transactions', JSON.stringify([...transactions, transaction]));
+      localStorage.setItem('currentBalance', (currentBalance - amount).toString());
       return {
         ...state,
         transactions: [...transactions, transaction],
@@ -76,6 +81,8 @@ function bankingReducer(
         currentScreen: 'landing',
       };
     case 'deposit':
+      localStorage.setItem('transactions', JSON.stringify([...transactions, transaction]));
+      localStorage.setItem('currentBalance', (currentBalance + amount).toString());
       return {
         ...state,
         transactions: [...transactions, transaction],
