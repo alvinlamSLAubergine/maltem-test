@@ -1,3 +1,7 @@
+# To view this app online
+
+- https://alvinlamslaubergine.github.io/maltem-test/
+
 # To run this app in your local machine
 
 - > git clone https://github.com/alvinlamSLAubergine/maltem-test
