@@ -1,5 +1,6 @@
 import { createContext, PropsWithChildren, useContext, useReducer } from 'react';
 import { Transaction } from '../types';
+import { convertDateString } from './convert-date-string';
 
 interface BankingState {
   currentScreen: 'landing' | 'withdraw' | 'deposit' | 'print' | 'quit';
@@ -59,7 +60,7 @@ function bankingReducer(
   const transactionAmount = type === 'deposit' ? amount : -amount;
   const transaction: Transaction = {
     id: transactions.length.toString(),
-    date: new Date().toISOString(),
+    date: convertDateString(new Date()),
     amount: transactionAmount,
     balance: currentBalance + transactionAmount,
     type: type === 'deposit' ? 'deposit' : 'withdraw',

@@ -1,5 +1,5 @@
 import './App.css';
-import { Header, Options, TransactionConsole } from './components';
+import { Header, Options, Statement, TransactionConsole } from './components';
 import { BankingProvider } from './context';
 import { ThemeProvider } from './theme';
 
@@ -11,6 +11,7 @@ function App() {
           <Header />
           <Options />
           <TransactionConsole />
+          <Statement />
         </div>
       </BankingProvider>
     </ThemeProvider>

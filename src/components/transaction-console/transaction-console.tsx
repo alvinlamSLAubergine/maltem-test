@@ -16,7 +16,7 @@ export const TransactionConsole: React.FC = () => {
       const action = currentScreen === 'deposit' ? deposit : withdraw;
       action(parseFloat(inputRef.current.value));
     }
-  }, []);
+  }, [currentScreen]);
 
   if (currentScreen !== 'deposit' && currentScreen !== 'withdraw') {
     return null;

@@ -1,0 +1,22 @@
+.table {
+  display: block;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.table--header-cell {
+  padding: 2px
+}
+
+.table--cell {
+  border: 2px solid;
+  padding: 1px;
+  padding-left: 4px;
+}
+
+.table--no-transactions {
+  border: 2px solid;
+  padding: 1px;
+  height: 50px;
+  text-align: center;
+}
