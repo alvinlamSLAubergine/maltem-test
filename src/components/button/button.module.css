@@ -1,0 +1,21 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background-color: var(--button-background-color-primary);
+  color: var(--icon-color-primary);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--button-background-color-primary-hover);
+}
+
+.button:active {
+  background-color: var(--button-background-color-primary-active);
+}

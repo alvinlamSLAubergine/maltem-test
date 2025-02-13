@@ -1,5 +1,5 @@
 import './App.css';
-import { Header, Options } from './components';
+import { Header, Options, TransactionConsole } from './components';
 import { BankingProvider } from './context';
 import { ThemeProvider } from './theme';
 
@@ -10,6 +10,7 @@ function App() {
         <div className='app'>
           <Header />
           <Options />
+          <TransactionConsole />
         </div>
       </BankingProvider>
     </ThemeProvider>

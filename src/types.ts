@@ -3,4 +3,5 @@ export type Transaction = {
   date: string;
   amount: number;
   balance: number;
+  type: 'withdraw' | 'deposit';
 };

@@ -1,0 +1,52 @@
+.console {
+  display: flex;
+  align-items: center;
+  padding: 8px 0px 8px 16px;
+  gap: 4px;
+  border-radius: 8px;
+  background-color: var(--background-color-primary);
+  border: 2px solid;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
+}
+
+.console--dollar {
+  display: flex;
+  align-items: center;
+  padding-bottom: 1px;
+}
+
+.console--input {
+  background-color: transparent;
+  width: 256px;
+  border: none;
+  color: var(--typography-color-primary);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.console--input:focus {
+  outline: none;
+}
+
+.console--error {
+  height: 21px;
+}
+
+.console--buttons {
+  display: flex;
+  margin-top: 24px;
+  justify-content: space-between;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

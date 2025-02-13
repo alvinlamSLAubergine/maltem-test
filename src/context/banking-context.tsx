@@ -5,6 +5,7 @@ interface BankingState {
   currentScreen: 'landing' | 'withdraw' | 'deposit' | 'print' | 'quit';
   transactions: Transaction[];
   currentBalance: number;
+  recentTransaction?: Transaction;
 }
 
 interface BankingContext extends BankingState {
@@ -53,40 +54,38 @@ function bankingReducer(
   }
 ): BankingState {
   const { transactions, currentBalance } = state;
-  const { amount = 0, screen = 'landing' } = action;
+  const { amount = 0, screen = 'landing', type } = action;
+
+  const transactionAmount = type === 'deposit' ? amount : -amount;
+  const transaction: Transaction = {
+    id: transactions.length.toString(),
+    date: new Date().toISOString(),
+    amount: transactionAmount,
+    balance: currentBalance + transactionAmount,
+    type: type === 'deposit' ? 'deposit' : 'withdraw',
+  };
 
   switch (action.type) {
     case 'withdraw':
       return {
         ...state,
-        transactions: [
-          ...transactions,
-          {
-            id: transactions.length.toString(),
-            date: new Date().toLocaleString(),
-            amount: -amount,
-            balance: currentBalance - amount,
-          },
-        ],
+        transactions: [...transactions, transaction],
         currentBalance: currentBalance - amount,
+        recentTransaction: transaction,
+        currentScreen: 'landing',
       };
     case 'deposit':
       return {
         ...state,
-        transactions: [
-          ...transactions,
-          {
-            id: transactions.length.toString(),
-            date: new Date().toISOString(),
-            amount: amount,
-            balance: currentBalance + amount,
-          },
-        ],
+        transactions: [...transactions, transaction],
         currentBalance: currentBalance + amount,
+        recentTransaction: transaction,
+        currentScreen: 'landing',
       };
     case 'screen':
       return {
         ...state,
+        recentTransaction: undefined,
         currentScreen: screen,
       };
     default:
